@@ -1,0 +1,191 @@
+.level_header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 8vh;
+  /* background-image: url(../uefa-nav-bg-slim.webp); */
+  margin: 0 auto;
+  padding: 15px;
+  background-image: url(https://img.uefa.com/imgml/uefacom/elements/main-nav/uefa-nav-bg-slim.jpg);
+}
+
+.user_info {
+  display: flex;
+  align-items: center;
+}
+
+.level_header-text {
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
+h2.level_header-text {
+  padding: 10px;
+}
+
+.level_header-text:hover {
+  color: #009fe3;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.field_container {
+  max-width: 1170px;
+  height: 92vh;
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+  padding: 15px;
+}
+
+.football_container {
+  position: relative;
+  width: 80%;
+  padding-bottom: 38%;
+  margin: 0 auto;
+}
+
+.field,
+.clone_field {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+.clone_field {
+  z-index: 1;
+}
+
+.inner_draggable {
+  border: 1px solid black;
+  background: rgba(0, 159, 227, 0.6);
+  margin: 10px;
+}
+
+.draggable {
+  position: relative;
+  background: #ffcd44;
+  cursor: pointer;
+}
+
+.draggable_icons {
+  width: 100%;
+}
+
+.hold {
+  border: solid #ccc 4px;
+}
+
+.hovered {
+  border: 0.5px dashed;
+}
+
+.invisible {
+  opacity: 0.5;
+}
+
+.block {
+  display: block;
+  width: calc(100% / 12);
+  height: calc(100% / 6);
+}
+
+.up_block {
+  width: calc(100% / 12);
+  height: calc(100% / 6);
+}
+
+.dark_green {
+  background-color: #006e1e;
+}
+
+.light_green {
+  background-color: #007a22;
+}
+
+.outline_border {
+  border-width: 1.5vw;
+  border-style: solid;
+  border-image: linear-gradient(to top, #00a0f0, #00aa32) 1 1;
+}
+
+.markup {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.markup .border {
+  display: block;
+  /* width: auto;
+  height: 100%; */
+  outline: 0.2vw solid #338b4b;
+}
+
+.markup .separator {
+  position: absolute;
+  top: 0;
+  width: 50%;
+  height: 100%;
+  border-right: 0.4vw solid #338b4b;
+}
+
+.markup .border {
+  display: block;
+  width: auto;
+  height: 100%;
+  border: 0.4vw solid #338b4b;
+}
+
+.markup .separator {
+  position: absolute;
+  top: 0;
+  width: 50%;
+  height: 100%;
+  border-right: 0.4vw solid #338b4b;
+}
+
+.markup .central_circle {
+  position: absolute;
+  width: 20%;
+  height: 40%;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+  border: 0.4vw solid #338b4b;
+  border-radius: 50%;
+}
+
+.markup .penalty {
+  position: absolute;
+  width: 8%;
+  height: 45%;
+  top: 50%;
+  transform: translateY(-50%);
+  border: 0.4vw solid #338b4b;
+}
+
+.markup .penalty.home {
+  left: 0;
+}
+
+.markup .penalty.guests {
+  right: 0;
+}
+
+.markup .zone {
+  position: absolute;
+  width: 16%;
+  height: 60%;
+  top: 50%;
+  transform: translateY(-50%);
+  border: 0.4vw solid #338b4b;
+}
+
+.markup .guests_goal {
+  right: 0;
+}

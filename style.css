@@ -1,0 +1,270 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "FontAwesome";
+  font-family: "Roboto", sans-serif;
+  font-family: "Roboto Condensed", Helvetica, Arial, sans-serif;
+}
+
+#root {
+  width: 100vw;
+  text-align: center;
+  background: url(https://img.uefa.com/imgml/uefacom/rebrands/ucl-bg-header.jpg)
+    no-repeat center;
+  background-size: cover;
+}
+
+.container {
+  max-width: 1200px;
+  /* height: 100%; */
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.home_title {
+  color: #fff;
+  font-size: 4rem;
+  letter-spacing: 10px;
+  padding: 10px;
+  cursor: default;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  max-width: 430px;
+  width: 100%;
+  height: 270px;
+  margin: 0 auto;
+}
+
+.menu_list {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.menu_list-item {
+  width: 100%;
+  list-style-type: none;
+  font-size: 2rem;
+  background: linear-gradient(
+    90deg,
+    rgba(159, 163, 163, 1) 0%,
+    rgba(195, 200, 200, 1) 50%,
+    rgba(159, 163, 163, 1) 100%
+  );
+  border-radius: 10px;
+  padding: 10px;
+  transition: all 0.3s ease;
+}
+
+.menu_list-item:hover {
+  color: #009fe3;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.form_modal,
+.about_modal {
+  position: absolute;
+  overflow: hidden;
+  visibility: hidden;
+  opacity: 0;
+  max-width: 430px;
+  width: 100%;
+  height: 550px;
+  background: linear-gradient(rgb(35, 43, 85), rgb(35, 43, 85));
+  margin: 0 auto;
+  padding: 30px;
+  border-radius: 5px;
+  box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.2);
+  transition: 0.25s;
+}
+
+.about_modal {
+  display: flex;
+  align-items: center;
+  padding: 0px 30px;
+}
+
+.about_modal-text {
+  font-size: 2rem;
+  color: rgb(159, 163, 163);
+}
+
+.modal_bg {
+  position: absolute;
+  visibility: hidden;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  transition: 0.25s;
+}
+
+.form_title {
+  text-align: left;
+  width: 100%;
+  height: 70px;
+  opacity: 1;
+  margin-bottom: 15px;
+}
+
+.form_title-active {
+  display: inline-block;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.8);
+  padding: 10px 0;
+  border-bottom: solid 2px #1059ff;
+  margin: 0 15px 15px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.form_title-inactive {
+  cursor: pointer;
+  color: rgba(255, 255, 255, 0.3);
+  padding-bottom: 0;
+  border-bottom: none;
+  transition: all 0.25s ease;
+}
+
+.form_inner {
+  position: relative;
+  text-align: left;
+  /* margin-bottom: 25px; */
+}
+
+.form_input,
+.form_btn {
+  width: 100%;
+  height: 35px;
+  font-size: 18px;
+  color: #fff;
+  border: none;
+  outline: none;
+  border-radius: 20px;
+  margin-bottom: 25px;
+  padding: 0px 15px;
+  background: rgba(255, 255, 255, 0.2);
+  transition: all 0.25s ease;
+}
+
+.form_input:hover {
+  box-shadow: 0 0 1px 0 #5af7dc;
+  transition: all 0.25s ease;
+}
+
+.form_input:focus {
+  background: rgba(255, 255, 255, 0.3);
+  border: none;
+  padding-right: 40px;
+  transition: background 0.5s ease;
+}
+
+.form_input:focus::placeholder {
+  opacity: 0;
+}
+
+.input_error,
+.input_error:focus {
+  border: 2px solid #cb333b;
+  border-left: 12px solid #cb333b;
+  transition: 0.5s ease;
+}
+
+.input_success,
+.input_success:focus {
+  border: 2px solid #0a9504;
+  border-left: 12px solid #0a9504;
+  transition: 0.5s ease;
+}
+
+/* .text_message {
+  transition: 0.5s ease;
+  position: absolute;
+  top: 150px;
+} */
+
+.text_message-success {
+  color: #0a9504;
+  position: absolute;
+  top: 35px;
+  transition: 0.2s ease;
+}
+
+.text_message-error {
+  color: #cb333b;
+  position: absolute;
+  top: 35px;
+  transition: 0.2s ease;
+}
+
+.form_btn {
+  cursor: pointer;
+  color: #00004b;
+  font-size: 13px;
+  font-weight: 700;
+  background-color: #5af7dc;
+}
+
+.form_btn:hover {
+  color: #fff;
+  background: #1059ff;
+  transition: 0.3 ease;
+}
+
+.close_btn {
+  position: absolute;
+  top: 5px;
+  right: 15px;
+  font-size: 2rem;
+  color: rgba(255, 255, 255, 0.8);
+  padding: 5px;
+  cursor: pointer;
+}
+
+.sign_in {
+  transition: all 0.3s ease;
+}
+
+.sign_in-close {
+  transform: translateX(-400px);
+  opacity: 0;
+}
+
+.sign_up {
+  position: relative;
+  top: -240px;
+  left: 400px;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.sign_up-show {
+  transform: translateX(-400px);
+  opacity: 1;
+}
+
+.show {
+  visibility: visible;
+  opacity: 1;
+  transition: all 0.3s ease;
+}
